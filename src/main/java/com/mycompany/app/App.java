@@ -106,7 +106,7 @@ public class App {
 
           String result = App.encrypt(arr1, message, arr2, key);
 
-          Map map = new HashMap();
+          Map map = new HashMap<String, String>();
           map.put("result", result);
           return new ModelAndView(map, "compute.mustache");
         }, new MustacheTemplateEngine());
