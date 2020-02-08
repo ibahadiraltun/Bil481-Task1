@@ -33,6 +33,17 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+        // assertTrue( true );
+
+        Integer[] arr1 = {1, 2, 3, 4, 5};
+        Integer[] arr2 = {2, 3, 4, 5, 6};
+
+        String message = "hello";
+        String key = "abcde";
+
+        
+
+        assertEquals("rndfn", App.encrypt(arr1, message, arr2, key));
+
     }
 }

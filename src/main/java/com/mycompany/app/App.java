@@ -12,19 +12,17 @@ public class App {
         int size_message = message.length();
         int size_key = key.length();
         
+        message = message.toLowerCase();
+        key = key.toLowerCase();
+
         String shifted_message = "";
         for (int i = 0; i < table_message.length; i++) {
             int shift_amount = table_message[i];
             char ch = message.charAt(i % size_message);
-            if ((ch >= 'a' && ch <= 'z') == false) {
-                System.out.println("String contains non-lowercase letters");
-                return "None";
-            }
             char shifted_char = (char) (((ch - 'a') + shift_amount) % 26 + 'a');
             shifted_message = shifted_message + shifted_char;
         }
         System.out.println(shifted_message);
-
 
         String shifted_key = "";
         for (int i = 0; i < table_key.length; i++) {
@@ -43,6 +41,8 @@ public class App {
             char new_char = (char) (((shifted_message.charAt(i) - 'a') + (shifted_key.charAt(i) - 'a')) % 26 + 'a');
             encrypted_message = encrypted_message + new_char;
         }
+
+        System.out.println(encrypted_message);
 
         return encrypted_message;
     }
