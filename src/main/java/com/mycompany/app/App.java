@@ -107,7 +107,7 @@ public class App {
           String key = req.queryParams("input4").replaceAll("\\s","");
           // int input2AsInt = Integer.parseInt(input2);
 
-          String result = key;
+          String result = encrypt(inputList, message, inputList2, key);
 
           Map map = new HashMap<String, String>();
           map.put("result", result);
