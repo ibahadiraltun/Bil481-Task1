@@ -77,7 +77,7 @@ public class App {
           java.util.ArrayList<Integer> inputList = new java.util.ArrayList<>();
           while (sc1.hasNext())
           {
-            int value = Integer.parseInt(sc1.next());
+            int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
             inputList.add(value);
           }
           System.out.println(inputList);
@@ -95,7 +95,7 @@ public class App {
           java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
           while (sc1.hasNext())
           {
-            int value = Integer.parseInt(sc1.next());
+            int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
             inputList2.add(value);
           }
           System.out.println(inputList2);
@@ -107,7 +107,7 @@ public class App {
           String key = req.queryParams("input4").replaceAll("\\s","");
           // int input2AsInt = Integer.parseInt(input2);
 
-          String result = encrypt(inputList, message, inputList2, key);
+          String result = inputList.toString();
 
           System.out.println("-----> " + result);
 
