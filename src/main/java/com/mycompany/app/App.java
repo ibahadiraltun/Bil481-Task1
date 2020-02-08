@@ -104,7 +104,7 @@ public class App {
           // int input2AsInt = Integer.parseInt(input2);
 
 
-          String result = App.encrypt(arr1, message, arr2, key);
+          String result = "FUCK";
 
           Map map = new HashMap<String, String>();
           map.put("result", result);
