@@ -37,7 +37,7 @@ public class App {
             char shifted_char = (char) (((ch - 'a') + shift_amount) % 26 + 'a');
             shifted_message = shifted_message + shifted_char;
         }
-        System.out.println(shifted_message);
+        // System.out.println(shifted_message);
 
         String shifted_key = "";
         for (int i = 0; i < table_key.size(); i++) {
@@ -46,7 +46,7 @@ public class App {
             char shifted_char = (char) (((ch - 'a') + shift_amount) % 26 + 'a');
             shifted_key = shifted_key + shifted_char;
         }
-        System.out.println(shifted_key);
+        // System.out.println(shifted_key);
 
         size_message = shifted_message.length();
         size_key = shifted_key.length();
@@ -57,7 +57,7 @@ public class App {
             encrypted_message = encrypted_message + new_char;
         }
 
-        System.out.println(encrypted_message);
+        System.out.println("----> encrypted message ----> " + encrypted_message);
 
         return encrypted_message;
     }
@@ -77,7 +77,7 @@ public class App {
           java.util.ArrayList<Integer> inputList = new java.util.ArrayList<>();
           while (sc1.hasNext())
           {
-            int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+            int value = Integer.parseInt(sc1.next());
             inputList.add(value);
           }
           System.out.println(inputList);
@@ -95,7 +95,7 @@ public class App {
           java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
           while (sc1.hasNext())
           {
-            int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+            int value = Integer.parseInt(sc1.next());
             inputList2.add(value);
           }
           System.out.println(inputList2);
@@ -108,6 +108,8 @@ public class App {
           // int input2AsInt = Integer.parseInt(input2);
 
           String result = encrypt(inputList, message, inputList2, key);
+
+          System.out.println("-----> " + result);
 
           Map map = new HashMap<String, String>();
           map.put("result", result);
