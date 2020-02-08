@@ -75,12 +75,23 @@ public class App {
           java.util.Scanner sc1 = new java.util.Scanner(input1);
           sc1.useDelimiter("[;\r\n]+");
           java.util.ArrayList<Integer> inputList = new java.util.ArrayList<>();
-          while (sc1.hasNext())
-          {
-            int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+          String line = "";
+          if (sc1.hasNext()) {
+            line = sc1.nextLine();
+          }
+
+          String[] splitted_line = line.split(" ");
+          for (int i = 0; i < splitted_line.length; i++) {
+            int value = Integer.parseInt(splitted_line[i]);
             inputList.add(value);
           }
-          System.out.println(inputList);
+
+        //   while (sc1.hasNext())
+        //   {
+        //     int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+        //     inputList.add(value);
+        //   }
+        //   System.out.println(inputList);
         //   Integer[] arr1 = new Integer[inputList.size()];
         //   for (int i = 0; i < inputList.size(); i++) {
         //     arr1[i] = inputList.get(i);
@@ -93,12 +104,23 @@ public class App {
           sc1 = new java.util.Scanner(input3);
           sc1.useDelimiter("[;\r\n]+");
           java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
-          while (sc1.hasNext())
-          {
-            int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+          line = "";
+          if (sc1.hasNext()) {
+            line = sc1.nextLine();
+          }
+
+          splitted_line = line.split(" ");
+          for (int i = 0; i < splitted_line.length; i++) {
+            int value = Integer.parseInt(splitted_line[i]);
             inputList2.add(value);
           }
-          System.out.println(inputList2);
+
+        //   while (sc1.hasNext())
+        //   {
+        //     int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+        //     inputList2.add(value);
+        //   }
+        //   System.out.println(inputList2);
         //   Integer[] arr2 = new Integer[inputList.size()];
         //   for (int i = 0; i < inputList.size(); i++) {
         //     arr2[i] = inputList.get(i);
